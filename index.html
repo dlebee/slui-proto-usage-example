@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="styles.css" />
+	<base href="./">
+</head>
+<body>
+
+	
+	<slui-button color="danger" onclick="alert('hey')">Nay</slui-button>
+	<slui-button color="success">Yay</slui-button>
+	<slui-button>boring</slui-button>
+	
+	<br>
+	<br>
+	
+	<slui-alert>Hey its some message!</slui-alert>
+	<slui-alert id="dangerAlert" color="danger" dismissable="true">Hey its some message!</slui-alert>
+	<slui-alert color="success">Hey its some message!</slui-alert>
+	
+	<script type="text/javascript" src="slui.js"></script>
+	<script>
+		document.getElementById('dangerAlert').addEventListener('dismissed', function(e) {
+			alert('was dismissed');
+		});
+	</script>
+</body>
+</html>
